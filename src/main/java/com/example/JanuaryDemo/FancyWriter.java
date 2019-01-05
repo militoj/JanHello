@@ -9,6 +9,6 @@ import org.springframework.stereotype.Component;
 
 public class FancyWriter implements TextWriter {
     public String WriteText(String s) {
-        return s + "fancy Text";
+        return s + "!!";
     }
 }
