@@ -42,11 +42,22 @@ public class HelloWorld {
 
     }
 
+
+
+
     // use link from
     //http://localhost:8080/fuckyocouchname?bitchname=Jemery
     @RequestMapping(value = "/fuckyocouchname")
-    @ResponseBody
     public String fuckyocouchname(@RequestParam("bitchname") String bitchname){
+        return " <h1> Buy a new one " + bitchname + ", you rich motherfucker </h1> " +
+                "<br> <img src=https://media0.giphy.com/media/DOb3rFL6d83Zu/giphy.gif?cid=3640f6095c310c4c5a722e306bf4d80c alt=\"This is an animated gif image, but it does not move\"/>\n" +
+                "<br> <br> <button type=button>Couch Store</button> "
+                ;
+
+    }
+
+    @PostMapping(value = "/fuckyocouchname/postcouch")
+    public String fuckyocouchnamepost(@RequestParam("bitchname") String bitchname){
         return " <h1> Buy a new one " + bitchname + ", you rich motherfucker </h1> " +
                 "<br> <img src=https://media0.giphy.com/media/DOb3rFL6d83Zu/giphy.gif?cid=3640f6095c310c4c5a722e306bf4d80c alt=\"This is an animated gif image, but it does not move\"/>\n" +
                 "<br> <br> <button type=button>Couch Store</button> "
